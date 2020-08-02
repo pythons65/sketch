@@ -18,7 +18,7 @@ function ellipse(x,y,w,h){
 
 function line(x1,y1,x2,y2){
 	sketch.innerHTML = ` <svg height="210" width="500">
-  <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+  <line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" style="stroke:rgb(255,0,0);stroke-width:2" />
 </svg> `
 	shapes.push(line1)
 }
