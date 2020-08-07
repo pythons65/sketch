@@ -3,7 +3,8 @@ var width = undefined
 var height = undefined
 var sketch = document.querySelector('#sketch')
 var setId;
-
+var mouseX = 0;
+var mouseY = 0;
 var shapes = []
 
 var style = {
@@ -21,16 +22,21 @@ function strokeWeight(n){
 function stroke(r,g,b,a){
   style.stroke = [r,g,b,a]
 }
-
 window.onload = (event) =>{
   evod._setup = function(){
     createSketch(400, 400)
+    if(typeof(setup) == 'function'){
     setup()
+  }
   }
   evod._draw = function(){
     setId = setInterval(()=>{
-      draw()
+    if(typeof(draw) == 'function'){
+    draw()
+  }
     }, 50);
+  }
+  evod._mouseMoved = function(){
   }
   evod._setup()
   evod._draw()
