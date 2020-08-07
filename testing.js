@@ -7,7 +7,6 @@ function mousePressed(){
   console.log(mouseX,mouseY)
 }
 function draw(){
-  //background  
 	background(51)
-  rect(mouseX,mouseY,30,30)
+  rect(mouseX-30,mouseY-30,30,30)
 }

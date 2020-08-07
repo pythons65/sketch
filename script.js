@@ -46,6 +46,10 @@ function fill(r,g,b,a){
   style.fill = [r,g,b,a]
 }
 
+function loop(){
+  evod._draw()
+}
+
 function returner(args){
   var good = []
   args.forEach((f)=>{

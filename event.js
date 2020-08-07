@@ -1,6 +1,6 @@
 document.onmousemove = function(e){
-      mouseX = e.clientX - sketch.offsetLeft
-      mouseY = e.clientY - sketch.offsetTop
+      mouseX  = outsideX(e.clientX - sketch.offsetLeft)
+      mouseY = outsideY(e.clientY - sketch.offsetTop)
 }
 document.onmousedown = function(e){
   if(typeof(mousePressed) == 'function'){
