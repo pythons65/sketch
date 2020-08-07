@@ -8,6 +8,8 @@ update in this version
 rotateOrigin() args -> (top | left | right | bottom) || px value
 stroke() args (grayscale value | rbg value | rgba value)
 strokeWeight() args (width)
+
+in another version line() will be updated
  */
 
 function draw(){
