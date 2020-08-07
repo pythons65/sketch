@@ -1,5 +1,5 @@
 document.onmousemove = function(e){
-      mouseX  = outsideX(e.clientX - sketch.offsetLeft)
+      mouseX  = outside(e.clientX - sketch.offsetLeft)
       mouseY = outsideY(e.clientY - sketch.offsetTop)
 }
 document.onmousedown = function(e){
