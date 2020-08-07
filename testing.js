@@ -14,12 +14,17 @@ in another version line() will be updated
 
 function draw(){
 	background(51)
-  rotate(x)
-  rotateOrigin('top left')
   stroke(10,100,10)
-  strokeWeight(3)
   fill(200,200,100,0)
-  ellipse(120,200,50,30)
+  rotate(x)
+  push()
+  strokeWeight(3)
+  fill(0)
+  rotateOrigin(60,60)
+  rect(120,200,50,30)
+  pop()
+  rotate(x)
+  rotateOrigin('top',' left')
   rect(300,300,50,50,'rect')
   x++;
 }

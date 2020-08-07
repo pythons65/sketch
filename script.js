@@ -157,7 +157,7 @@ function rotateOrigin(x,y){
 
 function rotateElt(elt){
   setStyles(elt, {
-    'transform-origin' : style.origin[1] + 'px ' + style.origin[0] + 'px' ,
+    'transform-origin' : style.origin[0] + 'px ' + style.origin[1] + 'px' ,
     'transform' : `rotate(${style.rotateAngle}deg)`
   })
 }
