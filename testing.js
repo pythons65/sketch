@@ -8,6 +8,7 @@ update in this version
 rotateOrigin() args -> (top | left | right | bottom) || px value
 stroke() args (grayscale value | rbg value | rgba value)
 strokeWeight() args (width)
+control over the object by id eg.rect(x,y,w,h,id)
 
 in another version line() will be updated
  */
