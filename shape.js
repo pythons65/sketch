@@ -1,19 +1,25 @@
-function rect(x,y,w,h){
+function rect(x,y,w,h,id){
 	let rect = create('div')
+  rect.id = id
 	setPos(rect,x,y)
-	fillElt(rect, style.fill)
-	rotateElt(rect)
+  setProps(rect)
 	size(rect,w,h)
 	shapes.push(rect)
 }
-function ellipse(x,y,w,h){
+function ellipse(x,y,w,h,id){
 	let ellipse = create('div')
+  ellipse.id = id
 	ellipse.style.borderRadius = '100%'
 	setPos(ellipse,x,y)
-	fillElt(ellipse, style.fill)
-	rotateElt(ellipse)
+  setProps(ellipse)
 	size(ellipse,w,h)
 	shapes.push(ellipse)
+}
+
+function setProps(elt){
+  fillElt(elt, style.fill)
+  setStroke(elt)
+	rotateElt(elt)
 }
 
 function line(x1,y1,x2,y2){

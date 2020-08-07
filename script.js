@@ -9,7 +9,17 @@ var shapes = []
 var style = {
   fill: [100,100,100],
   origin:[0,0],
+  strokeWeight:1,
+  stroke:[100,100,100],
   rotateAngle:0
+}
+
+function strokeWeight(n){
+  style.strokeWeight = n
+}
+
+function stroke(r,g,b,a){
+  style.stroke = [r,g,b,a]
 }
 
 window.onload = (event) =>{
@@ -28,7 +38,6 @@ window.onload = (event) =>{
 
 function fill(r,g,b,a){
   style.fill = [r,g,b,a]
-  return style.fill
 }
 
 function returner(args){
@@ -42,16 +51,25 @@ function returner(args){
 }
 
 function fillElt(elt,color){
+  elt.style.background = arrayToColor(color)
+}
+
+function arrayToColor(color){
   [r,g,b,a] = color
   if (!g && !b && !a){
-    elt.style.background = `rgba(${r},${r},${r},1)`
+    return`rgba(${r},${r},${r},1)`
   }else if(!a){
-    elt.style.background = `rgba(${r},${g},${b},1)`
+    return`rgba(${r},${g},${b},1)`
   }else{
-    elt.style.background = `rgba(${r},${b},${g},${a})`
+    return`rgba(${r},${b},${g},${a})`
   }
 }
 
+function setStroke(elt){
+  setStyles(elt,{
+    'border':`${style.strokeWeight}px solid ${arrayToColor(style.stroke)}`
+  })
+}
 
 
 function noLoop(){
@@ -112,7 +130,6 @@ function push(){
 function pop(){
   style = {...tempStyle}
 }
-
 const setStyles = function(element,styles){
     Object.assign(element.style, styles);
 }
@@ -130,6 +147,12 @@ function getAngleDeg(ax,ay,bx,by) {
 
 function rotate(angle){
   style.rotateAngle = angle
+}
+
+function rotateOrigin(x,y){
+
+  style.origin[0] = x
+  style.origin[1] = y
 }
 
 function rotateElt(elt){
