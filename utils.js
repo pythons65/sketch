@@ -13,3 +13,7 @@ function outsideX(value){
 function outsideY(value){
   return constrains(value,0,height)
 }
+
+function mapper(value,l,h,l1,h1){
+  return value * ((h1 -l1) / (h - l))
+}

@@ -14,6 +14,11 @@ function keyReleased(){
 }
 
 function draw(){
+  noStroke()
+  strokeWeight(10)
 	background(51)
   rect(mouseX-30,mouseY-30,30,30)
+  stroke(255)
+  textSize(40)
+  text('hello',20,20)
 }

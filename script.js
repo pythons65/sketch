@@ -12,11 +12,20 @@ var style = {
   origin:[0,0],
   strokeWeight:1,
   stroke:[100,100,100],
-  rotateAngle:0
+  rotateAngle:0,
+  fontSize:20
 }
 
 function strokeWeight(n){
   style.strokeWeight = n
+}
+
+function textSize(s){
+  style.fontSize = s
+}
+
+function noStroke(){
+  style.stroke = []
 }
 
 function stroke(r,g,b,a){
