@@ -8,6 +8,7 @@ function mousePressed(){
 }
 
 function keyPressed(){
+  console.log(this.key)
 }
 function keyReleased(){
   console.log(this)
