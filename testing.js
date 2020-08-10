@@ -6,6 +6,13 @@ function setup(){
 function mousePressed(){
   console.log(mouseX,mouseY)
 }
+
+function keyPressed(){
+}
+function keyReleased(){
+  console.log(this)
+}
+
 function draw(){
 	background(51)
   rect(mouseX-30,mouseY-30,30,30)
