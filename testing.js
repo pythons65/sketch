@@ -19,6 +19,7 @@ function draw(){
 	background(51)
   rect(mouseX-30,mouseY-30,30,30)
   stroke(255)
+  //strokeWeight is font-weight also
   textSize(40)
   text('hello',20,20)
 }
