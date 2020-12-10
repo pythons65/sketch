@@ -1,3 +1,3 @@
 # sketch
-# get p5.js experience from dom element # rabinson lamichane
+# get p5.js experience from dom element # 
 = 
