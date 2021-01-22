@@ -1,6 +1,7 @@
 
 var x = 10
 var y = 0
+var z = 1;
 var yvelocity = 0.1
 function setup(){
   createSketch(450, 400)
